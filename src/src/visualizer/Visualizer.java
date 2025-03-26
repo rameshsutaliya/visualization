@@ -14,7 +14,7 @@ public class Visualizer {
 
     public void visualize() {
         JFrame frame = new JFrame("This is " + sortAlgo.getClass().getName() + " visualizer");
-        Visualize vb = new Visualize(500, 100000, Color.GREEN);
+        Visualize vb = new Visualize(1000, 10000, Color.GREEN);
         frame.add(vb);
         frame.setSize(1200, 900);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
