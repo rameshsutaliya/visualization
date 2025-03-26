@@ -79,6 +79,8 @@ public class Visualize extends JPanel {
             timer.start();
             new Thread(() -> {
                 algorithm.sort(this);
+                // Just to verify after sorting is done.
+//                System.out.println(Arrays.toString(this.array));
                 timer.stop();
             }).start();
         }
