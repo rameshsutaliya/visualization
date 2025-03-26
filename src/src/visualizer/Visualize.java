@@ -43,6 +43,10 @@ public class Visualize extends JPanel {
         protected void paintComponent(Graphics g) {
             int panelWidth = getWidth();
             int panelHeight = getHeight();
+            /**
+             * There is a limitation with visualization here, if have the array.length>frameWidth in that case for a
+             * particular element we will be having the zero width rectangle and resulted we will not be draw it.
+             * */
             int barWidth = panelWidth / array.length;
             int maxValue = 1000;
             super.paintComponent(g);
@@ -51,7 +55,8 @@ public class Visualize extends JPanel {
             for (int i = 0; i < array.length; i++) {
                 int barHeight = (int) ((double) array[i] / maxValue * panelHeight);
                 g.setColor(color);
-                g.fillRect(i * barWidth, panelHeight - barHeight, barWidth - 1, barHeight);
+                // if the barWidth==0 we will not able to draw any rectangle.
+                g.fillRect(i * barWidth, panelHeight - barHeight, barWidth, barHeight);
             }
         }
 
