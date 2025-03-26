@@ -13,8 +13,8 @@ public class Visualizer {
     }
 
     public void visualize() {
-        JFrame frame = new JFrame("This is " + sortAlgo.getClass().getName() + " visualizer");
-        Visualize vb = new Visualize(1000, 1000, Color.GREEN);
+        JFrame frame = new JFrame("This is " + sortAlgo.getClass().getSimpleName() + " visualizer");
+        Visualize vb = new Visualize(1000, 1000000, Color.GREEN);
         frame.add(vb);
         frame.setSize(1200, 900);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
