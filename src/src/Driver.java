@@ -1,4 +1,5 @@
-import sorting.*;
+import sorting.SortBase;
+import sorting.RadixSort;
 import visualizer.Visualizer;
 
 public class Driver {
